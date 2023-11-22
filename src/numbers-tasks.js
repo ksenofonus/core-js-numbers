@@ -631,7 +631,7 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  return Math.sqrt(a ** 2 + b ** 2);
+  return Math.hypot(a, b);
 }
 
 /**
@@ -649,7 +649,7 @@ function getHypotenuse(a, b) {
  */
 function getCountOfOddNumbers(number) {
   let sum = 0;
-  for (let i = 0; i <= number; i += 1) {
+  for (let i = 0; i <= Math.abs(number); i += 1) {
     if (i % 2 !== 0) {
       sum += 1;
     }
